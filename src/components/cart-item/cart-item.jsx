@@ -1,22 +1,18 @@
-import { useState } from "react";
-
-import "./cart-item.scss";
+import { CartItemContainer, ItemDetails, Image, Name } from "./cart-item.style";
 
 const CartItem = ({ cartItems }) => {
   const { name, imageUrl, price, quantity } = cartItems;
 
-  // console.log(cartItems + quantity)
-
   return (
-    <div className="cart-item-container">
-      <img src={imageUrl} alt={`${name}`} />
-      <div className="item-details">
-    <span className="name">
-      {name}
-    </span>
-        <span className="price">{quantity} x ${price}  </span>
-      </div>
-    </div>
+    <CartItemContainer>
+      <Image src={imageUrl} alt={`${name}`} />
+      <ItemDetails>
+        <Name>{name}</Name>
+        <span>
+          {quantity} x ${price}{" "}
+        </span>
+      </ItemDetails>
+    </CartItemContainer>
   );
 };
 
