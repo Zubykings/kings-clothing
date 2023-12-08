@@ -15,6 +15,7 @@ import {
   LogoContainer,
   NavLinks,
   NavLink,
+  Button,
 } from "./navigation.styles";
 
 const Navbar = () => {
@@ -25,25 +26,24 @@ const Navbar = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <CrwnLogo />
+          <CrwnLogo /> <span>
+          King's Clothing
+          </span>
         </LogoContainer>
 
         <NavLinks>
+          <NavLink to="/">HOME</NavLink>
           <NavLink to="/shop">SHOP</NavLink>
 
           {currentUser ? (
-            <NavLink as="span" onClick={signOutUser}>
+            <Button as="span" onClick={signOutUser}>
               {" "}
               Sign Out
-            </NavLink>
+            </Button>
           ) : (
             <div>
-              <NavLink to="auth/log-in">
-                Log In
-              </NavLink>
-              <NavLink to="auth/register">
-                Register
-              </NavLink>
+              <Button to="auth/log-in">Log In</Button>
+              <Button to="auth/register">Register</Button>
             </div>
           )}
           <CartIcon />
