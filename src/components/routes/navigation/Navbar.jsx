@@ -25,7 +25,7 @@ const Navbar = () => {
     <Fragment>
       <NavigationContainer>
         <LogoContainer to="/">
-          <CrwnLogo className="logo" />
+          <CrwnLogo />
         </LogoContainer>
 
         <NavLinks>
@@ -34,12 +34,17 @@ const Navbar = () => {
           {currentUser ? (
             <NavLink as="span" onClick={signOutUser}>
               {" "}
-              SIGN OUT
+              Sign Out
             </NavLink>
           ) : (
-            <NavLink className="sign-in" to="/auth">
-              SIGN IN
-            </NavLink>
+            <div>
+              <NavLink to="auth/log-in">
+                Log In
+              </NavLink>
+              <NavLink to="auth/register">
+                Register
+              </NavLink>
+            </div>
           )}
           <CartIcon />
         </NavLinks>

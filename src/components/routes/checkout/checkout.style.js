@@ -6,7 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px auto 0;
+  margin: 120px auto 0;
 `;
 
 export const Header = styled.div`
@@ -19,14 +19,28 @@ export const Header = styled.div`
 
 export const Block = styled.div`
   text-transform: capitalize;
-  width: 23%;
+  font-weight: semibold;
+  font-size: 24px;
 
-  &:last-child {
-    width: 8%;
+  & span:last-child {
+    margin: 0 4px;
+  }
+
+  @media screen and (max-width: 720px) {
+    font-size: 12px;
   }
 `;
 export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
   font-size: 36px;
+
+  @media screen and (max-width: 720px) {
+    font-size: 20px;
+  }
+`;
+
+export const EmptyMessage = styled.span`
+  font-size: 18px;
+  margin: 50px auto;
 `;

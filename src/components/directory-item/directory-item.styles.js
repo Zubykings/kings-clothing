@@ -15,10 +15,10 @@ export const DirectoryBody = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   background-color: white;
   opacity: 0.7;
   position: absolute;
+  border-radius: 5px;
 
   h2 {
     font-weight: bold;
@@ -26,12 +26,21 @@ export const DirectoryBody = styled.div`
     font-size: 22px;
     color: #4a4a4a;
     text-transform: uppercase;
+
+    @media screen and (max-width: 720px) {
+      font-size: 16px;
+      margin:0;
+    }
   }
 
   p {
     font-weight: lighter;
     font-size: 16px;
   }
+
+  @media screen and (max-width: 720px) {
+  }
+      
 `;
 
 export const DirectoryItemContainer = styled.div`
@@ -41,7 +50,6 @@ export const DirectoryItemContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
   position: relative;

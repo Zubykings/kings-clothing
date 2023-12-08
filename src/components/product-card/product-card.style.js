@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import Button, { BUTTON_TYPE_CLASSES } from "../button/button";
+
 export const ProductCardContainer = styled.div`
   width: 100%;
   display: flex;
@@ -21,6 +23,8 @@ export const ProductCardContainer = styled.div`
     position: absolute;
     top: 255px;
     display: none;
+
+    
   }
 
   &:hover {
